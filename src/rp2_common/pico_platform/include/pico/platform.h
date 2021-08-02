@@ -398,7 +398,7 @@ __force_inline static int32_t __mul_instruction(int32_t a, int32_t b) {
  */
 uint __get_current_exception(void);
 
-#define WRAPPER_FUNC(x) __wrap_ ## x
+#define WRAPPER_FUNC(x) __attribute__((used)) __wrap_ ## x
 #define REAL_FUNC(x) __real_ ## x
 
 #ifdef __cplusplus
